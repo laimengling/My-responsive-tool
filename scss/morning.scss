@@ -27,15 +27,6 @@ a:hover{
   text-decoration: underline;
 }
 
-@each $breakpoint,$container-max-width in $grid-breakpoints-widths{
-
-  @media #{$breakpoint} {
-    .container{
-      max-width: $container-max-width;
-    }
-  }
-  
-}
 .no-gap {
   margin-left: 0;
   margin-right: 0;
