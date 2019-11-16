@@ -1,0 +1,19 @@
+$container-padding-x:15px;
+
+$grid-breakpoints-widths:(
+    ("screen and(min-width: 480px)"):450px,
+    ("screen and (min-width: 768px)"):738px,
+    ("screen and (min-width: 992px)"):962px,
+    ("screen and (min-width: 1200px)"):1170px
+);
+
+$col-num:12;
+$col-type-list:col col-xs col-sm col-md col-lg;
+$col-padding-x:15px;
+
+$media-row-col-type:(
+    ("screen and(min-width: 480px)"):col-xs,
+    ("screen and (min-width: 768px)"):col-sm,
+    ("screen and (min-width: 992px)"):col-md,
+    ("screen and (min-width: 1200px)"):col-lg
+);

@@ -1,0 +1,41 @@
+.container{
+  @include make-container();
+}
+
+.container-fluid{
+  @include make-container();
+}
+
+.row{
+  @include make-row();
+}
+
+/*基本网格HTML*/
+@each $list-item in $col-type-list{
+  @for $i from 1 through $col-num {
+    .#{$list-item}-#{$i} {
+      @include make-grid-columns();
+    }
+  }
+}
+
+/*抵消列 与列值*/
+@for $i from 1 through $col-num{
+  .row>.col-#{$i}{
+    @include make-row-col($i);
+  }
+  .offset-#{$i}{
+    margin-left:100%/$col-num*$i;
+  }
+}
+
+@each $media-query,$row-col-type in $media-row-col-type{
+  @media #{$media-query} {
+    @for $i from 1 through $col-num {
+      .row>.#{$row-col-type}-#{$i} {
+       @include make-row-col($i);
+      }
+    }
+  }
+}
+
